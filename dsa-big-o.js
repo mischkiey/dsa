@@ -4,7 +4,6 @@
 
 // 2. Even or Odd - What is the Big O of the following algorithm? Explain your answer.
 //    O(1) - As input grows, time complexity is constant.
-
 function isEven(value) {
     if (value % 2 === 0) {
         return true;
@@ -16,7 +15,6 @@ function isEven(value) {
 
 // 3. Are you here? - What is the Big O of the following algorithm? Explain your answer.
 //    O(n^2) - As input grows, time complexity grows at a rapid rate.
-
 function areYouHere(arr1, arr2) {
     for (let i = 0; i < arr1.length; i++) {
         const el1 = arr1[i];
@@ -30,8 +28,6 @@ function areYouHere(arr1, arr2) {
 
 // 4. Doubler - What is the Big O of the following algorithm? Explain your answer.
 //    O(n) - As input grows, time complexity increases at a proportionate rate.
-
-
 function doubleArrayValues(array) {
     for (let i = 0; i < array.length; i++) {
         array[i] *= 2;
@@ -41,8 +37,6 @@ function doubleArrayValues(array) {
 
 // 5. Naive search
 //    O(n) - As input grows, time complexity grows at a rapid rate.
-
-
 function naiveSearch(array, item) {
     for (let i = 0; i < array.length; i++) {
         if (array[i] === item) {
@@ -53,7 +47,6 @@ function naiveSearch(array, item) {
 
 // 6. Creating pairs:
 //    O(n^k) - As input grows, time complexity grows at a rapid rate.
-
 function createPairs(arr) {
     for (let i = 0; i < arr.length; i++) {
         for(let j = i + 1; j < arr.length; j++) {
@@ -64,8 +57,6 @@ function createPairs(arr) {
 
 // 7. Compute the sequence
 //    O(n) - As input grows, time complexity grows at a proportionate rate.
-
-
 function compute(num) {
     let result = [];
     for (let i = 1; i <= num; i++) {
@@ -85,7 +76,6 @@ function compute(num) {
 
 // 8. An efficient search
 //    O(logn) - As input grows, time complexity grows at a slow rate.
-
 function efficientSearch(array, item) {
     let minIndex = 0;
     let maxIndex = array.length - 1;
@@ -111,14 +101,11 @@ function efficientSearch(array, item) {
 
 // 9. Random element
 //    O(1) - As input grows, time complexity grows at a constant rate.
-
-
 function findRandomElement(arr) {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
 // 10. What Am I?
-
 function isWhat(n) {
     if (n < 2 || n % 1 !== 0) {
         return false;
@@ -130,7 +117,6 @@ function isWhat(n) {
 }
 
 // 11. Tower of Hanoi
-
 function hanoi(n, source, target, auxiliary) {
     // Where n = Number of Disks
     // Base Case:
@@ -157,48 +143,52 @@ let auxiliary = [];
 
 console.log(hanoi(4, source, target, auxiliary));
 
-// 12. Iterative Version
-
+// 12. Iterative Versions
+// 12.1. Count Sheep
 function countSheep(n) {
     for (let i = n; i > 0; i--) {
         console.log(`${i}: Another sheep jumps over the fence`)
     };
     return `All sheep jumped over the fence`
-}
+};
 
 console.log(countSheep(3));
 
+// 12.2 Power Calculator
 function powerCalculator(base, exp) {
     let power = 1;
     for (let i = exp; i > 0; i--) {
         power *= base;
-    }
+    };
     return power;
-}
+};
 
 console.log(powerCalculator(10, 2));
 
+// 12.3 Reverse String
 function reverseString(str) {
     let reversedString = '';
 
     for (let i = str.length - 1; i >= 0; i--) {
         reversedString += str[i];
-    }
+    };
     return reversedString;
-}
+};
 
-console.log(reverseString('Meow'));
+console.log(reverseString('Hello!'));
 
+// 12.4 nth Triangular Number
 function nthTriangularNumber(n) {
     let nthTriangularNumber = 0;
     for (let i = 0; i <= n; i++) {
         nthTriangularNumber += i;
-    }
+    };
     return nthTriangularNumber;
 };
 
 console.log(nthTriangularNumber(5));
 
+// 12.5 String Splitter
 function stringSplitter(str) {
     let outputStr = [];
     let splitStr = '';
@@ -218,39 +208,37 @@ function stringSplitter(str) {
     return outputStr;
 }
 
-console.log(stringSplitter('02/20/2020'));
+console.log(printSplitStr('Breakfast/Lunch/Dinner'));
 
+// 12.6 Fibonacci
 function fib(n) {
     let fibSequence = [];
-    let sum = 0;
 
     for (let i = 0; i < n; i++) {
         if(i === 0) {
-            fibSequence.push(1)
+            fibSequence.push(1);
         }
         else if(i < 3) {
-            console.log(fibSequence)
-            fibSequence.push(i)
+            fibSequence.push(i);
         }
         else {
-            sum = fibSequence[i-2] + fibSequence[i-1]
-            fibSequence.push(sum);
-            sum = 0;
-        }
-    }
+            fibSequence.push(fibSequence[i-2] + fibSequence[i-1]);
+        };
+    };
     return fibSequence;
-}
+};
 
 console.log(fib(7));
 
+// 12.7 Factorial
 function factorial(n) {
     let result = 1;
 
     for (let i = n; i > 0; i--) {
         result *= i;
-    }
+    };
     return result;
-}
+};
 
 console.log(factorial(5));
 
