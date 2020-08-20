@@ -1,39 +1,38 @@
 // 9. Remove Characters
-
 function removeCharacters(str, key) {
-    let newStr = '';
+    let outputStr = '';
+
     for (let i = 0; i < str.length; i++) {
        if (![...key].includes(str[i])) {
-           newStr += str[i];
-       }
-    }
-    return newStr;
-}
+           outputStr += str[i];
+       };
+    };
 
-console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'))
+    return outputStr;
+};
 
-// O(n)
+console.log(removeCharacters('Battle of the Vowels: Hawaii vs. Grozny', 'aeiou'));
 
 // 10. Products
-
 function products(arr) {
     let product = 1;
     let results = [];
+
     for (let i = 0; i < arr.length * 2; i++) {
         if(i < arr.length) {
             product *= arr[i]; 
         }
         else {
             results.push(product/arr[i-arr.length]);
-        }
-    }
+        };
+    };
+    
     return results;
-}
+};
 
 console.log(products([1, 3, 9, 4]));
 
 // 11. 2D array
-
 // function sweeper(arr) {
 //     let m = 0;
 //     let n = 0;
@@ -48,7 +47,6 @@ console.log(products([1, 3, 9, 4]));
 // }
 
 // 12. String Rotation
-
 function rotateStr(str1, str2) {
     let results = [];
     let rotatedStr = '';
@@ -69,4 +67,4 @@ function rotateStr(str1, str2) {
     return false;
 };
 
-console.log(rotateStr('meow', 'wome'));
+console.log(rotateStr('Hello', 'olleH'));
