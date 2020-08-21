@@ -13,10 +13,7 @@ function rotateStr(str1, str2) {
         rotatedStr = '';
     };
     
-    if(rotatedStrs.includes(str2)) {
-        return true;
-    }
-    return false;
+    return rotatedStrs.includes(str2);
 };
 
 console.log(rotateStr('Hello', 'olleH'));

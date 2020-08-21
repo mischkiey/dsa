@@ -1,5 +1,5 @@
 class _Node {
-    constructor() {
+    constructor(value, next) {
         // Holds the data
         this.value = value;
         // Points to the next node
