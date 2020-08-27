@@ -8,6 +8,8 @@ function reverseList(previousNode, currentNode) {
     // reversedNode contains currentNode.value and previousNode (reversedNode of preceeding recursion)
     // This is so that the next node points to the previous node that points to a previous node
     // Otherwise, the result is a circular reference
+    
+    // Pending todo: alter code so classes remain classes
     let reversedNode = {};
 
     if(currentNode === null) {

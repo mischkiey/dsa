@@ -44,4 +44,4 @@ class Memory {
     }
   }
   
-  module.exports = Memory;  
+  module.exports = Memory;

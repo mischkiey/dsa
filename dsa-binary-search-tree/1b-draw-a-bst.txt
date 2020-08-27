@@ -1,0 +1,23 @@
+1b. Draw the BST with the keys - E A S Y Q U E S T I O N
+
+Incorrect:
+
+           [E]
+    [A]           [S]
+           [Q]          [Y]
+    [I]           [U]
+           [O][T]
+                  [N]
+
+Where:
+- [A] and [S] are children of [E]
+- [Q] and [Y] are children of [S]
+- [U] is a left child of [Y]
+- [T] is a left child of [U]
+- [I] is a left child of [Q]
+- [O] is a right child of [I]
+- [N] is a right child of [N]
+
+Correct:
+
+Duplicate of a value is considered greater than the value itself.

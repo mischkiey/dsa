@@ -1,0 +1,16 @@
+1a. Given the data 3, 1, 4, 6, 9, 2, 5, 7, if you were to insert this into an empty binary search tree, what would the tree look like? (Draw the tree, no coding needed here.)
+
+Assuming each element is inserted in the order specified above, the previously-empty BST would look like this:
+
+          [3]
+    [1]          [4]
+          [2]           [6]
+                 [5]           [9]
+                        [7]
+
+Where:
+- [1] and [4] are children of [3]
+- [2] is a right child of [1]
+- [6] is a right child of [4]
+- [5] and [9] are children of [6]
+- [7] is a left child of [9]

@@ -1,5 +1,5 @@
 // Recursive
-const mazeRunner = function(arr, n, m) {
+const mazeRunner = function(arr, n = 0, m = 0) {
     // Base Case
     if(arr[n][m] === 'e') {
         return '';
@@ -36,3 +36,20 @@ const mazeRunner = function(arr, n, m) {
         return 'D' + mazeRunner(arr, n+1, m);
     };
 };
+
+let mySmallMaze = [
+    [' ', ' ', ' '],
+    [' ', '*', ' '],
+    [' ', ' ', 'e']
+];
+
+
+let maze = [
+    [' ', ' ', ' ', '*', ' ', ' ', ' '],
+    ['*', '*', ' ', '*', ' ', '*', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', ' '],
+    [' ', '*', '*', '*', '*', '*', ' '],
+    [' ', ' ', ' ', ' ', ' ', ' ', 'e']
+];
+
+console.log(mazeRunner(maze));

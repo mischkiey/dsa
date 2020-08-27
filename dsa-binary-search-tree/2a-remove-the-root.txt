@@ -1,0 +1,16 @@
+2a. Show how the tree would like if the root is deleted.
+
+Finding the smallest value in the right subtree:
+
+          [4]
+    [1]          [6]
+          [2]           [9]
+                 [5]           [7]
+
+Finding the largest value in the left subtree:
+
+          [2]
+    [1]          [4]
+                        [6]
+                 [5]           [9]
+                        [7]
